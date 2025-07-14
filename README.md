@@ -146,8 +146,6 @@ curl.exe -X POST "http://localhost:8001/ask_agent" `
   "response": "O advogado Fulano de Tal, com número de inscrição OAB 123456, tem a situação atual 'Ativo' na OAB de SP."
 }
 
-# Demonstração
-[Insira aqui um link para um vídeo curto (YouTube, Loom) ou um GIF (Gfycat, Imgur) demonstrando a aplicação rodando e respondendo a uma consulta.]
 
 # Boas Práticas e Considerações
 Tratamento de Erros: Ambos os serviços implementam tratamento de erros para lidar com falhas de rede, dados não encontrados e entradas inválidas.

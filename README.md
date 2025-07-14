@@ -11,17 +11,29 @@ LLM Agent (agent/): Um agente de IA construído com LangChain que utiliza um mod
 # Estrutura do Projeto
 
 ├── scraper/
+
 │   ├── __init__.py
+
 │   ├── main.py
+
 │   └── models.py
+
 ├── agent/
+
 │   ├── __init__.py
+
 │   ├── main.py
+
 │   └── tools.py
+
 ├── requirements.txt
+
 ├── Dockerfile_scraper  # (Não usado na execução local, mas mantido para contexto Docker)
+
 ├── Dockerfile_agent    # (Não usado na execução local, mas mantido para contexto Docker)
+
 ├── docker-compose.yml  # (Não usado na execução local, mas mantido para contexto Docker)
+
 └── README.md
 
 

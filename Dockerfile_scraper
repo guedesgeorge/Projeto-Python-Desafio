@@ -1,0 +1,20 @@
+FROM python:3.10-slim-buster
+
+WORKDIR /app
+
+# Instala apenas o navegador Chromium sem tentar gerenciar dependências de sistema
+RUN playwright install chromium
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+RUN playwright install chromium
+
+COPY scraper/ ./scraper/
+
+EXPOSE 8000
+
+CMD ["uvicorn", "scraper.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+# Adicione este comentário ou uma linha vazia aqui e salve o Dockerfile_scraper
+# Forçando rebuild

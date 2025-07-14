@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+requests
+beautifulsoup4
+playwright
+langchain
+langchain-core
+langchain-community
+langchain-cloudflare  # Adicionado para a nova importação do CloudflareWorkersAI
+pydantic
+python-dotenv

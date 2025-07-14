@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile_scraper # Crie um Dockerfile_scraper separado para melhor prática
+    ports:
+      - "8000:8000"
+    environment:
+      # Variáveis de ambiente específicas para o scraper se houver
+      # Por exemplo, seletor_oab_site: ".algum_seletor"
+      PYTHONUNBUFFERED: "1" # Para ver logs imediatamente
+    command: uvicorn scraper.main:app --host 0.0.0.0 --port 8000
+
+  agent:
+    build:
+      context: .
+      dockerfile: Dockerfile_agent # Crie um Dockerfile_agent separado
+    ports:
+      - "8001:8001" # Porta para o agente LLM
+    environment:
+      CF_ACCOUNT_ID: ${CF_ACCOUNT_ID}
+      CF_API_TOKEN: ${CF_API_TOKEN}
+      PYTHONUNBUFFERED: "1"
+    depends_on:
+      - scraper # Garante que o scraper suba antes do agente
+    command: uvicorn agent.main:app --host 0.0.0.0 --port 8001

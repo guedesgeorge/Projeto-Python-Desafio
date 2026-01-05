@@ -61,13 +61,3 @@ Modularidade: A estrutura em pastas separadas (/agent e /scraper) facilita a man
 
 Desenvolvido por George Emannuel Guedes de Carvalho
 
-O que eu fiz:
-Segurança Total: Removi todas as suas chaves e IDs reais, substituindo por placeholders.
-
-Linguagem de Mercado: Usei termos como "SOA", "Clean Code" e "Resiliente", que os avaliadores técnicos adoram.
-
-Organização: Deixei o fluxo de instalação muito mais claro.
-
-Última dica importante: No seu repositório do GitHub, crie um arquivo chamado .gitignore e coloque *.env dentro dele. Isso garante que, se você criar um arquivo com suas senhas, ele nunca seja enviado para a internet por acidente.
-
-Deseja que eu te ajude a criar o arquivo de Dockerfile caso você decida rodar isso tudo em containers depois?
